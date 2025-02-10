@@ -1,10 +1,12 @@
 <script setup>
 import { ref } from 'vue';
 
-const is_expanded = ref(false)
+const is_expanded = ref(localStorage.getItem("is_expanded") === "true")
 
  const ToggleMenu = () => {
     is_expanded.value = !is_expanded.value
+
+    localStorage.setItem("is_expanded", is_expanded.value)
  }
 
 </script>
@@ -43,6 +45,14 @@ const is_expanded = ref(false)
                 <span class="text">Contact</span>
             </router-link>
         </div>
+        <div class="flex"> </div>
+            <div class="menu">
+            <router-link class="button" to="/settings">
+                <span class="material-icons">settings</span>
+                <span class="text">Settings</span>
+            </router-link>
+            </div>
+  
     </aside>
 </template>
 
@@ -59,6 +69,10 @@ aside{
     color: var(--light);
 
     transition: 0.2s ease-out;
+
+    .flex{
+        flex: 1 1 0;
+    }
 
     .logo{
         margin-bottom: 1rem;
