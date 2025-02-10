@@ -33,12 +33,12 @@ const is_expanded = ref(false)
                 <span class="text">About</span>
             </router-link>
 
-            <router-link class="button" to="/">
+            <router-link class="button" to="/team">
                 <span class="material-icons">group</span>
                 <span class="text">Team</span>
             </router-link>
             
-            <router-link class="button" to="/">
+            <router-link class="button" to="/contact">
                 <span class="material-icons">email</span>
                 <span class="text">Contact</span>
             </router-link>
@@ -122,6 +122,19 @@ aside{
                 color: var(--light);
                 transition: 0.2s ease-out;
             }
+            
+            &:hover, &.router-link-exact-active{
+                background-color: var(--dark-alt);
+
+                .material-icons, .text{
+                    color: var(--primary);
+                }
+            }
+
+            &.router-link-exact-active{
+                border-right: 5px solid var(--primary);
+
+            }
         }
 
     }
@@ -140,6 +153,19 @@ aside{
         opacity: 1;
         transition: 0.3s ease-out;
     }
+
+        h3{
+            color: var(--grey);
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .button{
+            .material-icons{
+                margin-right: 1rem;
+            }
+        }
     }
 
     @media(max-width: 768px){
