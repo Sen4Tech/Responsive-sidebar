@@ -1,21 +1,12 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
-    content: [
-      "./index.html",
-      "./src/**/*.{vue,js,ts,jsx,tsx}",
-    ],
-    theme: {
-      extend: {
-        colors: {
-          'dark': 'var(--dark)',
-          'dark-alt': 'var(--dark-alt)',
-          'light': 'var(--light)',
-          'primary': 'var(--primary)',
-          'grey': 'var(--grey)'
-        },
-        width: {
-          'sidebar': 'var(--sidebar-width)'
-        }
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['InterVariable', '...defaultTheme.fontFamily.sans'],
       },
     },
-    plugins: [],
-  }
+  },
+  // ...
+}
