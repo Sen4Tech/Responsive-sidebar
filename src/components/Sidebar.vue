@@ -35,9 +35,9 @@ const is_expanded = ref(localStorage.getItem("is_expanded") === "true")
                 <span class="text">About</span>
             </router-link>
 
-            <router-link class="button" to="/team">
-                <span class="material-icons">group</span>
-                <span class="text">Team</span>
+            <router-link class="button" to="/table">
+                <span class="material-icons">file_open</span>
+                <span class="text">Table</span>
             </router-link>
             
             <router-link class="button" to="/contact">
