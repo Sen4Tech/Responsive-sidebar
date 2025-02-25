@@ -23,8 +23,8 @@ onMounted(getData);
     <main class="Home-page flex flex-col">
         <h1 class="font-bold text-2xl text-center text">Data From Company</h1>
         
-        <div class="container overflow-x-auto">
-    <table class="w-270 table-auto border-collapse bg-white shadow-lg rounded-lg">    
+        <div class="overflow-x-auto bg-white rounded-lg shadow-lg border border-gray-200">
+    <table class=" ">    
       <thead class="bg-gray-100 text-gray-700">
         <tr>
           <th class="px-4 py-3 text-left border-b font-semibold">No Contract</th>
