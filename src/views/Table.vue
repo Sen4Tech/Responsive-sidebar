@@ -1,8 +1,8 @@
 <script setup>
 import { onMounted, ref } from 'vue';
-import Tabletop from '../components/pages/Table/Tabletop.vue'
-import Tablemid from '../components/pages/Table/Tablemid.vue';
-import Tablebot from '../components/pages/Table/Tablebot.vue'
+import Tabletop from '../components/Table/Tabletop.vue'
+import Tablemid from '../components/Table/Tablemid.vue';
+import Tablebot from '../components/Table/Tablebot.vue'
 </script>
 <template>
     <div class="flex flex-col ">

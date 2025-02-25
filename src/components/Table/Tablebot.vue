@@ -21,7 +21,7 @@ onMounted(getData);
 </script>
 <template>
     <main class="Home-page flex flex-col">
-        <h1 class="font-bold text-2xl flex leading-15">Data From Progress</h1>
+        <h1 class="font-bold text-2xl text-center text">Data From Company</h1>
         
         <div class="container overflow-x-auto">
     <table class="w-270 table-auto border-collapse bg-white shadow-lg rounded-lg">    
@@ -59,3 +59,22 @@ onMounted(getData);
 
     
 </template>
+
+<style scoped>
+  .table-auto th {
+    text-transform: uppercase;
+  }
+
+  .table-auto td {
+    font-size: 14px;
+  }
+
+  .hover\:bg-gray-100:hover {
+    background-color: #f7fafc;
+  }
+
+  .text{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+</style>

@@ -20,7 +20,7 @@
 
 <template>
   <main class="Home-page flex flex-col container py-6">
-    <h1 class="font-bold text-2xl mb-4">Data From Customer</h1>
+    <h1 class="font-bold text-2xl text-center text">Data From Customer</h1>
     
     <div class="overflow-x-auto">
       <table class="min-w-full table-auto border-collapse bg-white shadow-lg rounded-lg">
@@ -54,3 +54,22 @@
     </div>
   </main>
 </template>
+
+<style scoped>
+  .table-auto th {
+    text-transform: uppercase;
+  }
+
+  .table-auto td {
+    font-size: 14px;
+  }
+
+  .hover\:bg-gray-100:hover {
+    background-color: #f7fafc;
+  }
+
+  .text{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+</style>
