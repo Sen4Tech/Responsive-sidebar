@@ -39,7 +39,7 @@ onMounted(getData);
       </thead>
 
       <tbody class="text-gray-700">
-        <tr class="text-black">
+        <tr class="text-black hover:bg-gray-50">
           <td class="px-4 py-3 border-b">{{ collection.No_Contract }}</td>
           <td class="px-4 py-3 border-b">{{ collection.Cust_KD }}</td>
           <td class="px-4 py-3 border-b">{{ collection.cust_name }}</td>
