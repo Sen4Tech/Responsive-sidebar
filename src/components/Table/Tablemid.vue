@@ -26,25 +26,25 @@
       <table class="min-w-full table-auto border-collapse bg-white shadow-lg rounded-lg">
         <thead class="bg-gray-100 text-gray-700">
           <tr>
-            <th class="px-4 py-3 text-left border-b font-semibold">ID Customer</th>
-            <th class="px-4 py-3 text-left border-b font-semibold">Nama</th>
-            <th class="px-4 py-3 text-left border-b font-semibold">Email</th>
-            <th class="px-4 py-3 text-left border-b font-semibold">Date Pembelian</th>
-            <th class="px-4 py-3 text-left border-b font-semibold">ID Product</th>
-            <th class="px-4 py-3 text-left border-b font-semibold">Qty Order</th> 
-            <th class="px-4 py-3 text-left border-b font-semibold">Actions</th> 
+            <th class="px-4 py-3 text-center border-b font-semibold">ID Customer</th>
+            <th class="px-4 py-3 text-center border-b font-semibold">Nama</th>
+            <th class="px-4 py-3 text-center border-b font-semibold">Email</th>
+            <th class="px-4 py-3 text-center border-b font-semibold">Date Pembelian</th>
+            <th class="px-4 py-3 text-center border-b font-semibold">ID Product</th>
+            <th class="px-4 py-3 text-center border-b font-semibold">Qty Order</th> 
+            <th class="px-4 py-3 text-center border-b font-semibold">Actions</th> 
           </tr>
         </thead>
         
         <tbody class="text-gray-700">
           <tr v-for="(item) in collection" :key="item.NoDo" class="hover:bg-gray-50">
-            <td class="px-4 py-3 border-b">{{ item.id_cust }}</td>
-            <td class="px-4 py-3 border-b">{{ item.cust_nm }}</td>
-            <td class="px-4 py-3 border-b">{{ item.cust_email }}</td>
-            <td class="px-4 py-3 border-b">{{ item.date_buy }}</td>
-            <td class="px-4 py-3 border-b">{{ item.id_product }}</td>
-            <td class="px-4 py-3 border-b">{{ item.qty }}</td>
-            <td class="px-4 py-3 border-b text-gray-500 flex justify-start space-x-2"> 
+            <td class="px-4 py-3 border-b text-center">{{ item.id_cust }}</td>
+            <td class="px-4 py-3 border-b text-center">{{ item.cust_nm }}</td>
+            <td class="px-4 py-3 border-b text-center">{{ item.cust_email }}</td>
+            <td class="px-4 py-3 border-b text-center">{{ item.date_buy }}</td>
+            <td class="px-4 py-3 border-b text-center">{{ item.id_product }}</td>
+            <td class="px-4 py-3 border-b text-center">{{ item.qty }}</td>
+            <td class="flex space-x-4 justify-center gap-3"> 
               <Edit class="cursor-pointer hover:text-blue-500" size="18"/> 
               <Trash class="cursor-pointer hover:text-red-500" size="18"/> 
             </td>
@@ -69,7 +69,9 @@
   }
 
   .text{
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
   }
+
+
 </style>

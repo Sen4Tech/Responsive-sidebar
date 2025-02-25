@@ -26,24 +26,24 @@
       <table class="min-w-full table-auto">
         <thead class="bg-gray-100 text-gray-700">
           <tr>
-            <th class="px-4 py-3 text-left border-b font-semibold">No Do</th>
-            <th class="px-4 py-3 text-left border-b font-semibold">Kategori</th>
-            <th class="px-4 py-3 text-left border-b font-semibold">Item Description</th>
-            <th class="px-4 py-3 text-left border-b font-semibold">Harga Satuan</th>
-            <th class="px-4 py-3 text-left border-b font-semibold">SubTotal</th>
-            <th class="px-4 py-3 text-left border-b font-semibold">Actions</th> 
+            <th class="px-4 py-3 text-center border-b font-semibold">No Do</th>
+            <th class="px-4 py-3 text-center border-b font-semibold">Kategori</th>
+            <th class="px-4 py-3 text-center border-b font-semibold">Item Description</th>
+            <th class="px-4 py-3 text-center border-b font-semibold">Harga Satuan</th>
+            <th class="px-4 py-3 text-center border-b font-semibold">SubTotal</th>
+            <th class="px-4 py-3 text-center border-b font-semibold">Actions</th> 
           </tr>
         </thead>
         
         <tbody class="text-gray-700">
           <tr v-for="(item) in collection" :key="item.NoDo" class="hover:bg-gray-100">
-            <td class="px-6 py-4 border-b">{{ item.NoDo }}</td>
-            <td class="px-6 py-4 border-b">{{ item.Kategori }}</td>
-            <td class="px-6 py-4 border-b">{{ item.item_desc }}</td>
-            <td class="px-6 py-4 border-b">{{ item.harga_satuan }}</td>
-            <td class="px-6 py-4 border-b">{{ item.subtotal }}</td>
+            <td class="px-6 py-4 border-b text-center">{{ item.NoDo }}</td>
+            <td class="px-6 py-4 border-b text-center">{{ item.Kategori }}</td>
+            <td class="px-6 py-4 border-b text-center">{{ item.item_desc }}</td>
+            <td class="px-6 py-4 border-b text-center">{{ item.harga_satuan }}</td>
+            <td class="px-6 py-4 border-b text-center">{{ item.subtotal }}</td>
             <td class="px-6 py-4 border-b text-gray-500">
-              <div class="flex space-x-4 justify-start">
+              <div class="flex space-x-4 justify-center gap-3">
                 <Edit class="cursor-pointer hover:text-blue-600" size="20"/> 
                 <Trash class="cursor-pointer hover:text-red-600" size="20"/> 
               </div>

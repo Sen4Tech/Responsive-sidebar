@@ -47,7 +47,7 @@ onMounted(getData);
           <td class="px-4 py-3 border-b">{{ collection.sub_divisi_nm}}</td>
           <td class="px-4 py-3 border-b">{{ collection.itemno}}</td>
           <td class="px-4 py-3 border-b">{{ collection.item_desc}}</td>
-          <td class="px-4 py-3 border-b text-gray-500 flex justify-start space-x-2"> 
+          <td class="flex space-x-4 justify-center gap-3"> 
               <Edit class="cursor-pointer hover:text-blue-500" size="18"/> 
               <Trash class="cursor-pointer hover:text-red-500" size="18"/> 
             </td>
@@ -74,7 +74,7 @@ onMounted(getData);
   }
 
   .text{
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
   }
 </style>
