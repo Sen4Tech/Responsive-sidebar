@@ -15,6 +15,17 @@
     }
   };
 
+  const deleteItem = async (dataDelete) => {
+    try{
+      let result = await axios.delete(`http://localhost:9341/getDB/web/update/${dataDelete}`);
+      console.log("Delete Successfully" , result);
+      getData()
+      alert("Delete Successfully")
+    } catch(error){
+      console.error(error);
+    }
+  } 
+
   onMounted(getData);
 </script>
 
@@ -44,8 +55,8 @@
             <td class="px-6 py-4 border-b text-center">{{ item.subtotal }}</td>
             <td class="px-6 py-4 border-b text-gray-500">
               <div class="flex space-x-4 justify-center gap-3">
-                <Edit class="cursor-pointer hover:text-blue-600" size="20"/> 
-                <Trash class="cursor-pointer hover:text-red-600" size="20"/> 
+                <Edit class="cursor-pointer hover:text-blue-600" size="20" /> 
+                <Trash class="cursor-pointer hover:text-red-600" size="20" @click="deleteItem(item.NoDo)"/> 
               </div>
             </td>
           </tr>
