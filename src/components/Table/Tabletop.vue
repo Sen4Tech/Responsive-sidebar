@@ -26,6 +26,25 @@
     }
   } 
 
+  // const updateItem = async (dataUpdate) => {
+  //   try{
+  //     let result = await axios.put(`http://localhost:9381/getDB/web/update/${dataUpdate}`);
+  //     console.log("Update Successfully" , result);
+  //     getData()
+  //     alert("Update Successfully")
+  //   } catch(error){
+  //     console.error(error);
+  //   }
+  // } 
+
+  // const Pages = async () => {
+  //   try {
+  //     let = 
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // }
+
   onMounted(getData);
 </script>
 
@@ -55,7 +74,9 @@
             <td class="px-6 py-4 border-b text-center">{{ item.subtotal }}</td>
             <td class="px-6 py-4 border-b text-gray-500">
               <div class="flex space-x-4 justify-center gap-3">
-                <Edit class="cursor-pointer hover:text-blue-600" size="20" /> 
+                <router-link :to="`/update/${item.NoDo}`">
+                  <Edit class="cursor-pointer hover:text-blue-600" size="20"/> 
+                </router-link>
                 <Trash class="cursor-pointer hover:text-red-600" size="20" @click="deleteItem(item.NoDo)"/> 
               </div>
             </td>

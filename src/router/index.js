@@ -17,6 +17,10 @@ const router = createRouter({
 			path: '/table',
 			component: () => import('../views/Table.vue')
 		},
+		{
+			path: '/update/:id',
+			component: () => import('../components/Update.vue')
+		},
         {
 			path: '/contact',
 			component: () => import('../views/Contact.vue')
