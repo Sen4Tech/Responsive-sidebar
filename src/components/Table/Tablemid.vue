@@ -7,7 +7,7 @@
 
   const getData = async () => {
     try {
-      let result = await axios.get('http://localhost:9381/getDB/web/getCust');
+      let result = await axios.get('http://localhost:9371/getDB/web/getCust');
       console.log(result.data);
       collection.value = result.data;
     } catch (error) {
@@ -17,7 +17,7 @@
 
   const deleteItem = async (dataDelete) => {
     try{
-      let result = await axios.delete(`http://localhost:9381/getDB/web/update/${dataDelete}`);
+      let result = await axios.delete(`http://localhost:9371/getDB/web/UDCust/${dataDelete}`);
       console.log("Delete Successfully" , result);
       getData()
       alert("Delete Successfully")
@@ -48,7 +48,7 @@
         </thead>
         
         <tbody class="text-gray-700">
-          <tr v-for="(item) in collection" :key="item.NoDo" class="hover:bg-gray-50">
+          <tr v-for="(item) in collection" :key="item.id_cust" class="hover:bg-gray-50">
             <td class="px-4 py-3 border-b text-center">{{ item.id_cust }}</td>
             <td class="px-4 py-3 border-b text-center">{{ item.cust_nm }}</td>
             <td class="px-4 py-3 border-b text-center">{{ item.cust_email }}</td>
@@ -57,7 +57,7 @@
             <td class="px-4 py-3 border-b text-center">{{ item.qty }}</td>
             <td class="flex space-x-4 justify-center gap-3"> 
               <Edit class="cursor-pointer hover:text-blue-500" size="18"/> 
-              <Trash class="cursor-pointer hover:text-red-500" size="18"  @click="deleteItem(item.NoDo)"/> 
+              <Trash class="cursor-pointer hover:text-red-500" size="18"  @click="deleteItem(item.id_cust)"/> 
             </td>
           </tr>
         </tbody>

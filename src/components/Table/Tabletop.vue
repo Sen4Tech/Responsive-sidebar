@@ -7,7 +7,7 @@
 
   const getData = async () => {
     try {
-      let result = await axios.get('http://localhost:9381/getDB/web/getData');
+      let result = await axios.get('http://localhost:9371/getDB/web/getData');
       console.log(result.data);
       collection.value = result.data;
     } catch (error) {
@@ -17,7 +17,7 @@
 
   const deleteItem = async (dataDelete) => {
     try{
-      let result = await axios.delete(`http://localhost:9381/getDB/web/update/${dataDelete}`);
+      let result = await axios.delete(`http://localhost:9371/getDB/web/update/${dataDelete}`);
       console.log("Delete Successfully" , result);
       getData()
       alert("Delete Successfully")
